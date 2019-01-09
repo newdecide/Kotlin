@@ -2,11 +2,16 @@ package com.example.odongju.mywebbrowser
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.webkit.WebViewClient
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.browse
+import org.jetbrains.anko.sendSMS
+import org.jetbrains.anko.share
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,9 +35,26 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
         // 컨텍스트 메뉴 등록
         registerForContextMenu(webview)
+    }
+
+    override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        menuInflater.inflate(R.menu.context, menu)
+    }
+
+    override fun onContextItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId){
+            R.id.action_share -> {
+                share(webview.url)
+            }
+            R.id.action_browser -> {
+                browse(webview.url)
+            }
+        }
+
+        return super.onContextItemSelected(item)
     }
 
     // 옵션 메뉴 작성
@@ -68,6 +90,8 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed()
         }
     }
+
+    
 
 
 }
