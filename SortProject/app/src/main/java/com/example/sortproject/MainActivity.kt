@@ -12,9 +12,14 @@ class MainActivity : AppCompatActivity() {
 
         // 정렬 할 숫자
         val names = mutableListOf(45, 153, 523, 234, 842, 486, 7, 62, 59, 91, 3, 31, 6, 50)
-        println(names)
+        val names2 = mutableListOf(35, 123, 423, 254, 742, 586, 4, 42, 79, 99, 2, 63, 6, 52)
+        println("정렬 전 : " + names)
         var ordered = insertionsort(names)
-        println(ordered)
+        println("삽입 정렬 후 : " + ordered)
+
+        println("정렬 전 : " + names2)
+        var ordered2 = selection_sort(names2)
+        println("선택 정렬 후 : " + ordered2)
 
     }
 
@@ -33,6 +38,24 @@ class MainActivity : AppCompatActivity() {
                 i -= 1
             }
             items[i] = item
+        }
+        return items
+    }
+
+    // 선택 정렬
+    fun selection_sort(items: MutableList<Int>): MutableList<Int> {
+        if (items.isEmpty() || items.size < 2) {
+            return items
+        }
+        for (idx in 0..items.count()) {
+            val array = items.subList(0, items.count() - idx)
+            val minItem = array.min()
+            val indexOfMinItem = array.indexOf(minItem)
+
+            if (minItem != null) {
+                items.removeAt(indexOfMinItem)
+                items.add(minItem)
+            }
         }
         return items
     }
