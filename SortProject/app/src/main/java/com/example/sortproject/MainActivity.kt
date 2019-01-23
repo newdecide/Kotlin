@@ -2,7 +2,8 @@ package com.example.sortproject
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import java.util.*
+import android.util.Log
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,18 +14,24 @@ class MainActivity : AppCompatActivity() {
         // 정렬 할 숫자
         val names = mutableListOf(45, 153, 523, 234, 842, 486, 7, 62, 59, 91, 3, 31, 6, 50)
         val names2 = mutableListOf(35, 123, 423, 254, 742, 586, 4, 42, 79, 99, 2, 63, 6, 52)
+        val names3 = mutableListOf(25, 135, 473, 264, 760, 505, 1, 47, 85, 92, 6, 64, 8, 37)
         println("정렬 전 : " + names)
-        var ordered = insertionsort(names)
-        println("삽입 정렬 후 : " + ordered)
 
-        println("정렬 전 : " + names2)
+        Log.e("정렬 전 : ", names.toString())
+        var ordered = insertion_sort(names)
+        Log.e("삽입 정렬 후 : ", ordered.toString())
+
+        Log.e("정렬 전 : ", names2.toString())
         var ordered2 = selection_sort(names2)
-        println("선택 정렬 후 : " + ordered2)
+        Log.e("선택 정렬 후 : ", ordered2.toString())
 
+        Log.e("정렬 전 : ", names2.toString())
+        var ordered3 = bubble_sort(names3)
+        Log.e("버블 정렬 후 : ", ordered3.toString())
     }
 
     // 삽입정렬
-    fun insertionsort(items: MutableList<Int>): List<Int> {
+    fun insertion_sort(items: MutableList<Int>): List<Int> {
         if (items.isEmpty() || items.size < 2) {
             return items
         }
@@ -55,6 +62,28 @@ class MainActivity : AppCompatActivity() {
             if (minItem != null) {
                 items.removeAt(indexOfMinItem)
                 items.add(minItem)
+            }
+        }
+        return items
+    }
+
+    // 버블 정렬
+    fun bubble_sort(items: MutableList<Int>): List<Int> {
+        if (items.isEmpty() || items.size < 2) {
+            return items
+        }
+        // swap이 false가 될 때까지 반
+        var swap = true
+        while (swap) {
+            swap = false
+            for (i in 0 until items.size - 1) {
+                if (items[i] > items[i + 1]) {
+                    val temp = items[i]
+                    items[i] = items[i + 1]
+                    items[i + 1] = temp
+                    // 정렬이 되지 않으면 true로 변환 끝나면 들어오지 않음.
+                    swap = true
+                }
             }
         }
         return items
