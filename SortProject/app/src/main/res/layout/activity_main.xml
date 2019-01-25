@@ -10,36 +10,48 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1.삽입정렬"
+            android:text="퀵 정렬"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
-            android:id="@+id/insertsort" app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintBottom_toTopOf="@+id/selectsort"
-            app:layout_constraintVertical_chainStyle="packed" android:layout_marginBottom="8dp"/>
-    <TextView
-            android:text="2.선택정렬"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/selectsort" app:layout_constraintTop_toBottomOf="@+id/insertsort"
-            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/bubblesort"
-            android:layout_marginBottom="8dp"/>
-    <TextView
-            android:text="3.버블정렬"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bubblesort" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/selectsort" app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintBottom_toTopOf="@+id/mergesort" android:layout_marginBottom="8dp"/>
-    <TextView
-            android:text="4.병합정렬"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/mergesort" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bubblesort" app:layout_constraintHorizontal_bias="0.5"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+    <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="1.삽입정렬"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"-->
+            <!--android:id="@+id/insertsort" app:layout_constraintHorizontal_bias="0.5"-->
+            <!--app:layout_constraintBottom_toTopOf="@+id/selectsort"-->
+            <!--app:layout_constraintVertical_chainStyle="packed" android:layout_marginBottom="8dp"/>-->
+    <!--<TextView-->
+            <!--android:text="2.선택정렬"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"-->
+            <!--android:id="@+id/selectsort" app:layout_constraintTop_toBottomOf="@+id/insertsort"-->
+            <!--app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/bubblesort"-->
+            <!--android:layout_marginBottom="8dp"/>-->
+    <!--<TextView-->
+            <!--android:text="3.버블정렬"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/bubblesort" app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/selectsort" app:layout_constraintHorizontal_bias="0.5"-->
+            <!--app:layout_constraintBottom_toTopOf="@+id/mergesort" android:layout_marginBottom="8dp"/>-->
+    <!--<TextView-->
+            <!--android:text="4.병합정렬"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/mergesort" app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/bubblesort" app:layout_constraintHorizontal_bias="0.5"/>-->
 
 </android.support.constraint.ConstraintLayout>

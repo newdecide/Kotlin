@@ -16,23 +16,28 @@ class MainActivity : AppCompatActivity() {
         val names2 = mutableListOf(35, 123, 423, 254, 742, 586, 4, 42, 79, 99, 2, 63, 6, 52)
         val names3 = mutableListOf(25, 135, 473, 264, 760, 505, 1, 47, 85, 92, 6, 64, 8, 37)
         val names4 = mutableListOf(38, 255, 27, 324, 43, 286, 3, 9, 512, 10, 82, 1024, 91 ,2048)
-        println("정렬 전 : " + names)
+        val names5= mutableListOf(2, 4, 7, 3, 6, 9, 5, 1, 0, 10)
 
-        Log.e("정렬 전 : ", names.toString())
-        var ordered = insertion_sort(names)
-        Log.e("삽입 정렬 후 : ", ordered.toString())
+//        println("정렬 전 : " + names)
+//        Log.e("정렬 전 : ", names.toString())
+//        var ordered = insertion_sort(names)
+//        Log.e("삽입 정렬 후 : ", ordered.toString())
+//
+//        Log.e("정렬 전 : ", names2.toString())
+//        var ordered2 = selection_sort(names2)
+//        Log.e("선택 정렬 후 : ", ordered2.toString())
+//
+//        Log.e("정렬 전 : ", names2.toString())
+//        var ordered3 = bubble_sort(names3)
+//        Log.e("버블 정렬 후 : ", ordered3.toString())
+//
+//        Log.e("정렬 전 : ", names2.toString())
+//        var ordered4 = merge_sort(names4)
+//        Log.e("병합 정렬 후 : ", ordered4.toString())
 
-        Log.e("정렬 전 : ", names2.toString())
-        var ordered2 = selection_sort(names2)
-        Log.e("선택 정렬 후 : ", ordered2.toString())
-
-        Log.e("정렬 전 : ", names2.toString())
-        var ordered3 = bubble_sort(names3)
-        Log.e("버블 정렬 후 : ", ordered3.toString())
-
-        Log.e("정렬 전 : ", names2.toString())
-        var ordered4 = merge_sort(names4)
-        Log.e("병합 정렬 후 : ", ordered4.toString())
+        Log.e("정렬 전 : ", names5.toString())
+        var ordered5 = quick_sort(names5)
+        Log.e("퀵 정렬 후 : ",ordered5.toString())
     }
 
     // 삽입정렬
@@ -107,6 +112,7 @@ class MainActivity : AppCompatActivity() {
         return merge(merge_sort(left), merge_sort(right))
     }
 
+    // 병합
     fun merge(left: List<Int>, right: List<Int>): List<Int>{
         var indexLeft = 0
         var indexRight = 0
@@ -131,5 +137,24 @@ class MainActivity : AppCompatActivity() {
             indexRight++
         }
         return newList
+    }
+
+    // 퀵 정렬
+    fun quick_sort(items:List<Int>):List<Int>{
+        if(items.count() < 2){
+            return items
+        }
+        // 배열의 중간 값
+        val pivot = items[items.count()/2]
+        val equal = items.filter {it == pivot}
+        Log.e("pivot values : ", equal.toString())
+        // 피벗보다 적은 값들
+        val less = items.filter {it < pivot}
+        Log.e("less values : ", less.toString())
+        // 피벗 중 가장 큰 값
+        val greater = items.filter {it > pivot}
+        Log.e("greater values : ", greater.toString())
+
+        return quick_sort(less) + equal + quick_sort(greater)
     }
 }
