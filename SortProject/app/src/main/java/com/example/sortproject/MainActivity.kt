@@ -17,27 +17,32 @@ class MainActivity : AppCompatActivity() {
         val names3 = mutableListOf(25, 135, 473, 264, 760, 505, 1, 47, 85, 92, 6, 64, 8, 37)
         val names4 = mutableListOf(38, 255, 27, 324, 43, 286, 3, 9, 512, 10, 82, 1024, 91 ,2048)
         val names5= mutableListOf(2, 4, 7, 3, 6, 9, 5, 1, 0, 10)
+        val names6 = mutableListOf(61,109,149,111,34,2,24,119,122,125,27,145)
 
 //        println("정렬 전 : " + names)
 //        Log.e("정렬 전 : ", names.toString())
 //        var ordered = insertion_sort(names)
 //        Log.e("삽입 정렬 후 : ", ordered.toString())
-//
+
 //        Log.e("정렬 전 : ", names2.toString())
 //        var ordered2 = selection_sort(names2)
 //        Log.e("선택 정렬 후 : ", ordered2.toString())
-//
+
 //        Log.e("정렬 전 : ", names2.toString())
 //        var ordered3 = bubble_sort(names3)
 //        Log.e("버블 정렬 후 : ", ordered3.toString())
-//
+
 //        Log.e("정렬 전 : ", names2.toString())
 //        var ordered4 = merge_sort(names4)
 //        Log.e("병합 정렬 후 : ", ordered4.toString())
 
-        Log.e("정렬 전 : ", names5.toString())
-        var ordered5 = quick_sort(names5)
-        Log.e("퀵 정렬 후 : ",ordered5.toString())
+//        Log.e("정렬 전 : ", names5.toString())
+//        var ordered5 = quick_sort(names5)
+//        Log.e("퀵 정렬 후 : ",ordered5.toString())
+
+        Log.e("정렬 전 : ", names6.toString())
+        var ordered6 = shell_sort(names6)
+        Log.e("쉘 정렬 후 : ",ordered6.toString())
     }
 
     // 삽입정렬
@@ -156,5 +161,33 @@ class MainActivity : AppCompatActivity() {
         Log.e("greater values : ", greater.toString())
 
         return quick_sort(less) + equal + quick_sort(greater)
+    }
+
+    // 쉘 정렬
+    fun shell_sort(items: MutableList<Int>): List<Int> {
+        if (items.isEmpty() || items.size < 2) {
+            return items
+        }
+
+        val n = items.size
+        // 첫번째 반복 이후 이전갭을 2로 나눈다.
+        var gap = n / 2
+        // 열간격이 0보다 클때까지 반복
+        while (gap > 0) {
+            var i = gap
+            while (i < n) {
+                // 제로 요소와 갭에 있는 요소를 비교
+                val temp = items[i]
+                var j = i
+                while (j >= gap && items[j - gap] > temp) {
+                    items[j] = items[j - gap]
+                    j -= gap
+                }
+                items[j] = temp
+                i += 1
+            }
+            gap /= 2
+        }
+        return items
     }
 }
