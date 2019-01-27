@@ -15,9 +15,10 @@ class MainActivity : AppCompatActivity() {
         val names = mutableListOf(45, 153, 523, 234, 842, 486, 7, 62, 59, 91, 3, 31, 6, 50)
         val names2 = mutableListOf(35, 123, 423, 254, 742, 586, 4, 42, 79, 99, 2, 63, 6, 52)
         val names3 = mutableListOf(25, 135, 473, 264, 760, 505, 1, 47, 85, 92, 6, 64, 8, 37)
-        val names4 = mutableListOf(38, 255, 27, 324, 43, 286, 3, 9, 512, 10, 82, 1024, 91 ,2048)
-        val names5= mutableListOf(2, 4, 7, 3, 6, 9, 5, 1, 0, 10)
-        val names6 = mutableListOf(61,109,149,111,34,2,24,119,122,125,27,145)
+        val names4 = mutableListOf(38, 255, 27, 324, 43, 286, 3, 9, 512, 10, 82, 1024, 91, 2048)
+        val names5 = mutableListOf(2, 4, 7, 3, 6, 9, 5, 1, 0, 10)
+        val names6 = mutableListOf(61, 109, 149, 111, 34, 2, 24, 119, 122, 125, 27, 145)
+        val names7 = mutableListOf(6, 0, 7, 4, 8, 5, 2, 2, 1, 0, 2)
 
 //        println("정렬 전 : " + names)
 //        Log.e("정렬 전 : ", names.toString())
@@ -40,9 +41,13 @@ class MainActivity : AppCompatActivity() {
 //        var ordered5 = quick_sort(names5)
 //        Log.e("퀵 정렬 후 : ",ordered5.toString())
 
-        Log.e("정렬 전 : ", names6.toString())
-        var ordered6 = shell_sort(names6)
-        Log.e("쉘 정렬 후 : ",ordered6.toString())
+//        Log.e("정렬 전 : ", names6.toString())
+//        var ordered6 = shell_sort(names6)
+//        Log.e("쉘 정렬 후 : ",ordered6.toString())
+
+        Log.e("정렬 전 : ", names7.toString())
+        var ordered7 = cycle_sort(names7)
+        Log.e("사이클 정렬 후 : ", ordered7.toString())
     }
 
     // 삽입정렬
@@ -105,8 +110,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     // 병합 정렬
-    fun merge_sort(list: List<Int> ): List<Int>{
-        if(list.size <= 1){
+    fun merge_sort(list: List<Int>): List<Int> {
+        if (list.size <= 1) {
             return list
         }
 
@@ -118,13 +123,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     // 병합
-    fun merge(left: List<Int>, right: List<Int>): List<Int>{
+    fun merge(left: List<Int>, right: List<Int>): List<Int> {
         var indexLeft = 0
         var indexRight = 0
-        var newList : MutableList<Int> = mutableListOf()
+        var newList: MutableList<Int> = mutableListOf()
 
-        while(indexLeft < left.count() && indexRight < right.count()){
-            if (left[indexLeft] <= right[indexRight]){
+        while (indexLeft < left.count() && indexRight < right.count()) {
+            if (left[indexLeft] <= right[indexRight]) {
                 newList.add(left[indexLeft])
                 indexLeft++
             } else {
@@ -133,11 +138,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        while (indexLeft < left.size){
+        while (indexLeft < left.size) {
             newList.add(left[indexLeft])
             indexLeft++
         }
-        while (indexRight < right.size){
+        while (indexRight < right.size) {
             newList.add(right[indexRight])
             indexRight++
         }
@@ -145,19 +150,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     // 퀵 정렬
-    fun quick_sort(items:List<Int>):List<Int>{
-        if(items.count() < 2){
+    fun quick_sort(items: List<Int>): List<Int> {
+        if (items.count() < 2) {
             return items
         }
         // 배열의 중간 값
-        val pivot = items[items.count()/2]
-        val equal = items.filter {it == pivot}
+        val pivot = items[items.count() / 2]
+        val equal = items.filter { it == pivot }
         Log.e("pivot values : ", equal.toString())
         // 피벗보다 적은 값들
-        val less = items.filter {it < pivot}
+        val less = items.filter { it < pivot }
         Log.e("less values : ", less.toString())
         // 피벗 중 가장 큰 값
-        val greater = items.filter {it > pivot}
+        val greater = items.filter { it > pivot }
         Log.e("greater values : ", greater.toString())
 
         return quick_sort(less) + equal + quick_sort(greater)
@@ -188,6 +193,53 @@ class MainActivity : AppCompatActivity() {
             }
             gap /= 2
         }
+        return items
+    }
+
+    // 사이클 정렬
+    fun cycle_sort(items: MutableList<Int>): List<Int> {
+        if (items.isEmpty() || items.size < 2) {
+            return items
+        }
+
+        var writes = 0
+
+        for (cycleStart in 0 until items.size - 1) {
+            var item = items[cycleStart]
+
+            var pos = cycleStart
+            for (i in cycleStart + 1 until items.size) {
+                if (items[i] < item) {
+                    pos++
+                }
+            }
+
+            if (pos == cycleStart) continue
+
+            while (item == items[pos]) {
+                pos++
+            }
+            val temp = items[pos]
+            items[pos] = item
+            item = temp
+            writes++
+
+            while (pos != cycleStart) {
+                pos = cycleStart
+                for (i in cycleStart + 1 until items.size) {
+                    if (items[i] < item) pos++
+                }
+
+                while (item == items[pos]) {
+                    pos++
+                }
+                val temp2 = items[pos]
+                items[pos] = item
+                item = temp2
+                writes++
+            }
+        }
+
         return items
     }
 }
