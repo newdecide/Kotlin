@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         val names6 = mutableListOf(61, 109, 149, 111, 34, 2, 24, 119, 122, 125, 27, 145)
         val names7 = mutableListOf(6, 0, 7, 4, 8, 5, 2, 2, 1, 0, 2)
         val names8 = mutableListOf(4, 65, 2, -31, 0, 99, 2, 83, 782, 1)
+        val names9 = mutableListOf(2, 0, -2, 5, 5, 3, -1, -3, 5, 5, 0, 2, -4, 4, 2)
 
 //        println("정렬 전 : " + names)
 //        Log.e("정렬 전 : ", names.toString())
@@ -50,9 +51,13 @@ class MainActivity : AppCompatActivity() {
 //        var ordered7 = cycle_sort(names7)
 //        Log.e("사이클 정렬 후 : ", ordered7.toString())
 
-        Log.e("정렬 전 : ", names8.toString())
-        var ordered8 = cycle_sort(names8)
-        Log.e("칵테일 정렬 후 : ", ordered8.toString())
+//        Log.e("정렬 전 : ", names8.toString())
+//        var ordered8 = cycle_sort(names8)
+//        Log.e("칵테일 정렬 후 : ", ordered8.toString())
+
+        Log.e("정렬 전 : ", names9.toString())
+        var ordered9 = strand_sort(names9)
+        Log.e("스트랜드s 정렬 후 : ", ordered9.toString())
     }
 
     // 삽입정렬
@@ -274,5 +279,41 @@ class MainActivity : AppCompatActivity() {
                 }
         } while(swapped)
         return items
+    }
+
+    // 스트랜드 정렬
+    fun strand_sort(l: List<Int>): List<Int> {
+        fun merge(left: MutableList<Int>, right: MutableList<Int>): MutableList<Int> {
+            val res = mutableListOf<Int>()
+            while(!left.isEmpty() && !right.isEmpty()){
+                if(left[0] <= right[0]){
+                    res.add(left[0])
+                    left.removeAt(0)
+                }
+                else {
+                    res.add(right[0])
+                    right.removeAt(0)
+                }
+            }
+            res.addAll(left)
+            res.addAll(right)
+            return res
+        }
+        var list = l.toMutableList()
+        var result = mutableListOf<Int>()
+        while(!list.isEmpty()){
+            val sorted = mutableListOf(list[0])
+            list.removeAt(0)
+            val leftover = mutableListOf<Int>()
+            for(item in list){
+                if(sorted.last() <= item)
+                    sorted.add(item)
+                else
+                    leftover.add(item)
+            }
+            result = merge(sorted, result)
+            list = leftover
+        }
+        return result
     }
 }
