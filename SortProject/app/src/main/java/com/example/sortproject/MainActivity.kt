@@ -21,43 +21,48 @@ class MainActivity : AppCompatActivity() {
         val names7 = mutableListOf(6, 0, 7, 4, 8, 5, 2, 2, 1, 0, 2)
         val names8 = mutableListOf(4, 65, 2, -31, 0, 99, 2, 83, 782, 1)
         val names9 = mutableListOf(2, 0, -2, 5, 5, 3, -1, -3, 5, 5, 0, 2, -4, 4, 2)
+        val names10 = mutableListOf(4, 65, 2, -31, 0, 99, 83, 782, 1, 365, 29, 201)
 
 //        println("정렬 전 : " + names)
 //        Log.e("정렬 전 : ", names.toString())
 //        var ordered = insertion_sort(names)
 //        Log.e("삽입 정렬 후 : ", ordered.toString())
-
+//
 //        Log.e("정렬 전 : ", names2.toString())
 //        var ordered2 = selection_sort(names2)
 //        Log.e("선택 정렬 후 : ", ordered2.toString())
-
+//
 //        Log.e("정렬 전 : ", names2.toString())
 //        var ordered3 = bubble_sort(names3)
 //        Log.e("버블 정렬 후 : ", ordered3.toString())
-
+//
 //        Log.e("정렬 전 : ", names2.toString())
 //        var ordered4 = merge_sort(names4)
 //        Log.e("병합 정렬 후 : ", ordered4.toString())
-
+//
 //        Log.e("정렬 전 : ", names5.toString())
 //        var ordered5 = quick_sort(names5)
 //        Log.e("퀵 정렬 후 : ",ordered5.toString())
-
+//
 //        Log.e("정렬 전 : ", names6.toString())
 //        var ordered6 = shell_sort(names6)
 //        Log.e("쉘 정렬 후 : ",ordered6.toString())
-
+//
 //        Log.e("정렬 전 : ", names7.toString())
 //        var ordered7 = cycle_sort(names7)
 //        Log.e("사이클 정렬 후 : ", ordered7.toString())
-
+//
 //        Log.e("정렬 전 : ", names8.toString())
 //        var ordered8 = cycle_sort(names8)
 //        Log.e("칵테일 정렬 후 : ", ordered8.toString())
+//
+//        Log.e("정렬 전 : ", names9.toString())
+//        var ordered9 = strand_sort(names9)
+//        Log.e("스트랜드 정렬 후 : ", ordered9.toString())
 
-        Log.e("정렬 전 : ", names9.toString())
-        var ordered9 = strand_sort(names9)
-        Log.e("스트랜드s 정렬 후 : ", ordered9.toString())
+        Log.e("정렬 전 : ", names10.toString())
+        var ordered10 = patience_sort(names10)
+        Log.e("끈기 정렬 후 : ", ordered10.toString())
     }
 
     // 삽입정렬
@@ -255,29 +260,29 @@ class MainActivity : AppCompatActivity() {
 
     // 칵테일 정렬
     fun cacktai_sort(items: MutableList<Int>): List<Int> {
-        if(items.isEmpty() || items.size < 2) {
+        if (items.isEmpty() || items.size < 2) {
             return items
         }
-        fun swap(i: Int, j: Int){
+        fun swap(i: Int, j: Int) {
             val temp = items[i]
             items[i] = items[j]
-            items[j]=temp
+            items[j] = temp
         }
-        do{
+        do {
             var swapped = false
-            for (i in 0 until items.size -1)
-                if(items[i] > items[i+1]){
-                    swap(i, i+1)
+            for (i in 0 until items.size - 1)
+                if (items[i] > items[i + 1]) {
+                    swap(i, i + 1)
                     swapped = true
                 }
-            if(!swapped) break
+            if (!swapped) break
             swapped = false
-            for(i in items.size -2 downTo 0)
-                if(items[i] > items[i+1]){
-                    swap(i, i+1)
+            for (i in items.size - 2 downTo 0)
+                if (items[i] > items[i + 1]) {
+                    swap(i, i + 1)
                     swapped = true
                 }
-        } while(swapped)
+        } while (swapped)
         return items
     }
 
@@ -285,12 +290,11 @@ class MainActivity : AppCompatActivity() {
     fun strand_sort(l: List<Int>): List<Int> {
         fun merge(left: MutableList<Int>, right: MutableList<Int>): MutableList<Int> {
             val res = mutableListOf<Int>()
-            while(!left.isEmpty() && !right.isEmpty()){
-                if(left[0] <= right[0]){
+            while (!left.isEmpty() && !right.isEmpty()) {
+                if (left[0] <= right[0]) {
                     res.add(left[0])
                     left.removeAt(0)
-                }
-                else {
+                } else {
                     res.add(right[0])
                     right.removeAt(0)
                 }
@@ -299,14 +303,15 @@ class MainActivity : AppCompatActivity() {
             res.addAll(right)
             return res
         }
+
         var list = l.toMutableList()
         var result = mutableListOf<Int>()
-        while(!list.isEmpty()){
+        while (!list.isEmpty()) {
             val sorted = mutableListOf(list[0])
             list.removeAt(0)
             val leftover = mutableListOf<Int>()
-            for(item in list){
-                if(sorted.last() <= item)
+            for (item in list) {
+                if (sorted.last() <= item)
                     sorted.add(item)
                 else
                     leftover.add(item)
@@ -315,5 +320,39 @@ class MainActivity : AppCompatActivity() {
             list = leftover
         }
         return result
+    }
+
+    // 끈기 정렬
+    fun patience_sort(items: MutableList<Int>): List<Int> {
+        if (items.isEmpty() || items.size < 2) {
+            return items
+        }
+        val piles = mutableListOf<MutableList<Int>>()
+        outer@ for (el in items) {
+            for (pile in piles) {
+                if (pile.last() > el) {
+                    pile.add(el)
+                    continue@outer
+                }
+            }
+            piles.add(mutableListOf(el))
+        }
+        for (i in 0 until items.size) {
+            var min = piles[0].last()
+            var minPileIndex = 0
+            for (j in 1 until piles.size) {
+                if (piles[j].last() < min) {
+                    min = piles[j].last()
+                    minPileIndex = j
+                }
+            }
+            items[i] = min
+            val minPile = piles[minPileIndex]
+            minPile.removeAt(minPile.lastIndex)
+            if (minPile.size == 0) piles.removeAt(minPileIndex)
+
+        }
+
+        return items
     }
 }
