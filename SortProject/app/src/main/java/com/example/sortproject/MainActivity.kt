@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val names9 = mutableListOf(2, 0, -2, 5, 5, 3, -1, -3, 5, 5, 0, 2, -4, 4, 2)
         val names10 = mutableListOf(4, 65, 2, -31, 0, 99, 83, 782, 1, 365, 29, 201)
         val names11 = mutableListOf(28, 44, 46, 24, 25, 4, 1, 3, -28, -44, -46, -24, -25 ,-4, -1, -3)
-
+        val names12 = mutableListOf(100, 2, 56, 200, -52, 3, 99, 33, 177, -199)
 
 //        println("정렬 전 : " + names)
 //        Log.e("정렬 전 : ", names.toString())
@@ -66,9 +66,13 @@ class MainActivity : AppCompatActivity() {
 //        var ordered10 = patience_sort(names10)
 //        Log.e("끈기 정렬 후 : ", ordered10.toString())
 
-        Log.e("정렬 전 : ", names11.toString())
-        var ordered11 = patience_sort(names11)
-        Log.e("빗질 정렬 후 : ", ordered11.toString())
+//        Log.e("정렬 전 : ", names11.toString())
+//        var ordered11 = patience_sort(names11)
+//        Log.e("빗질 정렬 후 : ", ordered11.toString())
+
+        Log.e("정렬 전 : ", names12.toString())
+        var ordered12 = patience_sort(names12)
+        Log.e("그놈 정렬 후 : ", ordered12.toString())
     }
 
     // 삽입정렬
@@ -386,5 +390,21 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return items
+    }
+
+    // 그놈 정렬
+    fun  gnomeSort(items: MutableList<Int>, ascending: Boolean = true) {
+        var i = 1
+        var j = 2
+        while (i < items.size)
+            if (ascending && (items[i - 1] <= items[i]) ||
+                !ascending && (items[i - 1] >= items[i]))
+                i = j++
+            else {
+                val temp = items[i - 1]
+                items[i - 1] = items[i]
+                items[i--] = temp
+                if (i == 0) i = j++
+            }
     }
 }
