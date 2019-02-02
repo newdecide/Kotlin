@@ -22,8 +22,9 @@ class MainActivity : AppCompatActivity() {
         val names8 = mutableListOf(4, 65, 2, -31, 0, 99, 2, 83, 782, 1)
         val names9 = mutableListOf(2, 0, -2, 5, 5, 3, -1, -3, 5, 5, 0, 2, -4, 4, 2)
         val names10 = mutableListOf(4, 65, 2, -31, 0, 99, 83, 782, 1, 365, 29, 201)
-        val names11 = mutableListOf(28, 44, 46, 24, 25, 4, 1, 3, -28, -44, -46, -24, -25 ,-4, -1, -3)
+        val names11 = mutableListOf(28, 44, 46, 24, 25, 4, 1, 3, -28, -44, -46, -24, -25, -4, -1, -3)
         val names12 = mutableListOf(100, 2, 56, 200, -52, 3, 99, 33, 177, -199)
+        val names13 = intArrayOf(7, 6, 9, 2, 4, 8, 1, 3, 5)
 
 //        println("정렬 전 : " + names)
 //        Log.e("정렬 전 : ", names.toString())
@@ -70,9 +71,14 @@ class MainActivity : AppCompatActivity() {
 //        var ordered11 = patience_sort(names11)
 //        Log.e("빗질 정렬 후 : ", ordered11.toString())
 
-        Log.e("정렬 전 : ", names12.toString())
-        var ordered12 = patience_sort(names12)
-        Log.e("그놈 정렬 후 : ", ordered12.toString())
+//        Log.e("정렬 전 : ", names12.toString())
+//        var ordered12 = gnome_sort(names12)
+//        Log.e("그놈 정렬 후(오름차순) : ", ordered12.toString())
+
+
+        println("${names13.contentToString()} initially")
+        PancakeSort(names13)
+
     }
 
     // 삽입정렬
@@ -367,23 +373,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     // 빗질 정렬
-    fun comb_sort(items: MutableList<Int>): List<Int>{
-        if (items.isEmpty() || items.size < 2 ){
+    fun comb_sort(items: MutableList<Int>): List<Int> {
+        if (items.isEmpty() || items.size < 2) {
             return items
         }
         var gap = items.size
-        if(gap <= 1) return items
+        if (gap <= 1) return items
         var swaps = false
         while (gap > 1 || swaps) {
             gap = (gap / 1.247331).toInt()
-            if(gap < 1) gap = 1
+            if (gap < 1) gap = 1
             var i = 0
             swaps = false
-            while(i + gap < items.size){
-                if(items[i] > items[i + gap]){
+            while (i + gap < items.size) {
+                if (items[i] > items[i + gap]) {
                     val tmp = items[i]
-                    items[i] = items[i+gap]
-                    items[i+gap] = tmp
+                    items[i] = items[i + gap]
+                    items[i + gap] = tmp
                     swaps = true
                 }
                 i++
@@ -393,12 +399,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     // 그놈 정렬
-    fun  gnomeSort(items: MutableList<Int>, ascending: Boolean = true) {
+    fun gnome_sort(items: MutableList<Int>, ascending: Boolean = true): List<Int> {
+        if (items.isEmpty() || items.size < 2) {
+            return items
+        }
         var i = 1
         var j = 2
-        while (i < items.size)
+        while (i < items.size) {
             if (ascending && (items[i - 1] <= items[i]) ||
-                !ascending && (items[i - 1] >= items[i]))
+                !ascending && (items[i - 1] >= items[i])
+            )
                 i = j++
             else {
                 val temp = items[i - 1]
@@ -406,5 +416,82 @@ class MainActivity : AppCompatActivity() {
                 items[i--] = temp
                 if (i == 0) i = j++
             }
+        }
+        return items
+    }
+
+    // 팬케이크 정렬
+//    class pancake_sort(items: MutableList<Int>): List<Int> {
+//        if (items.isEmpty() || items.size < 2) {
+//            return items
+//        }
+//
+//            for (n in items.size downTo 2){
+//                val index = indexOfMax(n)
+//                if(index != n - 1){
+//                    if(index > 0) {
+//                        flip(index)
+//                    }
+//                    flip(n - 1)
+//                }
+//            }
+//
+//        fun indexOfMax(n: Int): Int{
+//            var index = 0
+//            for(i in 1 until n){
+//                if(items[i] > items[index]) index = i
+//            }
+//            return index
+//        }
+//
+//         fun flip(index: Int){
+//            var i = index
+//            var j = 0
+//            while( j < i){
+//                val temp = items[j]
+//                items[j] = items[i]
+//                items[i] = temp
+//                j++
+//                i--
+//            }
+//        }
+//        return items
+//    }
+
+
+}
+class PancakeSort(private val a: IntArray) {
+    init {
+        for (n in a.size downTo 2) {
+            val index = indexOfMax(n)
+            if (index != n - 1) {
+                if (index > 0) {
+                    flip(index)
+                    println("${a.contentToString()} after flipping first ${index + 1}")
+                }
+                flip(n - 1)           // move largest to end
+                println("${a.contentToString()} after flipping first $n")
+            }
+        }
+    }
+
+    private fun indexOfMax(n: Int): Int {
+        var index = 0
+        for (i in 1 until n) {
+            if (a[i] > a[index]) index = i
+        }
+        return index
+    }
+
+    private fun flip(index: Int) {
+        var i = index
+        var j = 0
+        while (j < i) {
+            val temp = a[j]
+            a[j] = a[i]
+            a[i] = temp
+            j++
+            i--
+        }
     }
 }
