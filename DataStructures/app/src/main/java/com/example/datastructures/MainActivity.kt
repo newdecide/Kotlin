@@ -1,8 +1,10 @@
 package com.example.datastructures
 
+import android.os.Build.VERSION_CODES.P
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import java.lang.Exception
+import java.util.*
 import java.util.jar.JarEntry
 
 class MainActivity : AppCompatActivity() {
@@ -35,26 +37,40 @@ class MainActivity : AppCompatActivity() {
 //        println("pop : "+ stack.pop())
 //        println("size of stack : " +stack.size())
 
-        var a = Queue(mutableListOf("karthiq", 2, 3, "four"))
+//        var a = Queue(mutableListOf("karthiq", 2, 3, "four"))
+//
+//        // queue 7 추가
+//        println(a.enqueue(7))
+//        println(a) // print all
+//
+//        // queue 제거
+//        println(a.dequeue())
+//        println(a)
+//
+//        // queue 나갈 수 있는거 엿보기
+//        println(a.peek())
+//        println(a)
+//
+//        // queue 다음 대상 확인
+//        print(a.size())
+//
+//        // 비어있는지 확인
+//        println(a.isEmpty()
 
-        // queue 7 추가
-        println(a.enqueue(7))
-        println(a) // print all
-
-        // queue 제거
-        println(a.dequeue())
-        println(a)
-
-        // queue 나갈 수 있는거 엿보기
-        println(a.peek())
-        println(a)
-
-        // queue 다음 대상 확인
-        print(a.size())
-
-        // 비어있는지 확인
-        println(a.isEmpty())
-
+        val queue = DynamicQueueArray()
+        queue.enqueue(4)
+        println(queue.size())
+        queue.dequeue()
+        println(queue.size())
+        queue.enqueue(56)
+        println(queue.size())
+        queue.enqueue(67)
+        println(queue.size())
+        println(queue.dequeue())
+        println(queue.size())
+        println(queue.peek())
+        println(queue.size())
+        println(queue.isQueueEmpty())
     }
 
     class StackWithList {
@@ -138,24 +154,114 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-class Queue(list: MutableList<Any>) {
-    var items: MutableList<Any> = list
-    fun isEmpty(): Boolean = items.isEmpty()
-    fun size(): Int = items.count()
-    override fun toString() = items.toString()
-    fun enqueue(element: Any) {
-        items.add(element)
+//class Queue(list: MutableList<Any>) {
+//    var items: MutableList<Any> = list
+//    fun isEmpty(): Boolean = items.isEmpty()
+//    fun size(): Int = items.count()
+//    override fun toString() = items.toString()
+//    fun enqueue(element: Any) {
+//        items.add(element)
+//    }
+//
+//    fun dequeue(): Any? {
+//        if (this.isEmpty()) {
+//            return null
+//        } else {
+//            return items.removeAt(0)
+//        }
+//    }
+//
+//    fun peek(): Any? {
+//        return items[0]
+//    }
+//}
+
+class DynamicQueueArray {
+    private val capacity = 6
+    private var queueArr: IntArray = IntArray(this.capacity)
+    private var front = 0
+    private var rear = -1
+    private var currentSize = 0
+
+    fun enqueue(item: Int) {
+        if (isQueueFull()) {
+            println("Queue is full, increase capacity...")
+            increaseCapacity()
+        }
+        rear++
+        if (rear >= queueArr.size && currentSize !== queueArr.size) {
+            rear = 0
+        }
+        queueArr[rear] = item
+        currentSize++
+        println("Adding: $item")
     }
 
-    fun dequeue(): Any? {
-        if (this.isEmpty()) {
-            return null
+    fun dequeue() {
+        if (isQueueEmpty()) {
+            println("Underflow ! Unable to remove element from Queue")
         } else {
-            return items.removeAt(0)
+            front++
+            if (front > queueArr.size - 1) {
+                System.out.println("remove: " + queueArr[front - 1])
+                front = 0
+            } else {
+                System.out.println("remove: " + queueArr[front - 1])
+            }
+            currentSize--
         }
     }
 
-    fun peek(): Any? {
-        return items[0]
+    fun peek(): Int? {
+        if(isQueueEmpty()){
+            println("Underflow ! Unable to remove element from Queue")
+            return null
+        } else {
+            return queueArr[front]
+        }
+    }
+
+    fun size(): Int {
+        return currentSize
+    }
+
+    private fun isQueueFull(): Boolean {
+        var status = false
+        if (currentSize == queueArr.size) {
+            status = true
+        }
+        return status
+    }
+
+    fun isQueueEmpty(): Boolean {
+        var status = false
+        if (currentSize === 0) {
+            status = true
+        }
+        return status
+    }
+
+    private fun increaseCapacity() {
+        val newCapacity = this.queueArr.size * 2
+        val newArr = IntArray(newCapacity)
+
+        var tmpFront = front
+        var index = -1
+        while(true){
+            newArr[++index] = this.queueArr[tmpFront]
+            tmpFront++
+            if(tmpFront == this.queueArr.size) {
+                tmpFront = 0
+            }
+            if(currentSize === index + 1){
+                break
+            }
+        }
+
+        this.queueArr = newArr
+        System.out.println("New array capacity: " + this.queueArr.size)
+
+        this.front = 9
+        this.rear = index
     }
 }
