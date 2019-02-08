@@ -57,20 +57,32 @@ class MainActivity : AppCompatActivity() {
 //        // 비어있는지 확인
 //        println(a.isEmpty()
 
-        val queue = DynamicQueueArray()
-        queue.enqueue(4)
-        println(queue.size())
-        queue.dequeue()
-        println(queue.size())
-        queue.enqueue(56)
-        println(queue.size())
-        queue.enqueue(67)
-        println(queue.size())
-        println(queue.dequeue())
-        println(queue.size())
-        println(queue.peek())
-        println(queue.size())
-        println(queue.isQueueEmpty())
+//        val queue = DynamicQueueArray()
+//        queue.enqueue(4)
+//        println(queue.size())
+//        queue.dequeue()
+//        println(queue.size())
+//        queue.enqueue(56)
+//        println(queue.size())
+//        queue.enqueue(67)
+//        println(queue.size())
+//        println(queue.dequeue())
+//        println(queue.size())
+//        println(queue.peek())
+//        println(queue.size())
+//        println(queue.isQueueEmpty())
+
+        var deq = Deque()
+        println(deq.isDequeEmpty())
+        println(deq.addFirst("karthiq"))
+        println(deq.isDequeEmpty())
+        println(deq.addLast(false))
+        println(deq.getLast())
+        println(deq.size())
+        println(deq.peekFirst())
+        println(deq.peekLast())
+        deq.removeLast()
+        deq.removeFirst()
     }
 
     class StackWithList {
@@ -154,27 +166,27 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-//class Queue(list: MutableList<Any>) {
-//    var items: MutableList<Any> = list
-//    fun isEmpty(): Boolean = items.isEmpty()
-//    fun size(): Int = items.count()
-//    override fun toString() = items.toString()
-//    fun enqueue(element: Any) {
-//        items.add(element)
-//    }
-//
-//    fun dequeue(): Any? {
-//        if (this.isEmpty()) {
-//            return null
-//        } else {
-//            return items.removeAt(0)
-//        }
-//    }
-//
-//    fun peek(): Any? {
-//        return items[0]
-//    }
-//}
+class Queue(list: MutableList<Any>) {
+    var items: MutableList<Any> = list
+    fun isEmpty(): Boolean = items.isEmpty()
+    fun size(): Int = items.count()
+    override fun toString() = items.toString()
+    fun enqueue(element: Any) {
+        items.add(element)
+    }
+
+    fun dequeue(): Any? {
+        if (this.isEmpty()) {
+            return null
+        } else {
+            return items.removeAt(0)
+        }
+    }
+
+    fun peek(): Any? {
+        return items[0]
+    }
+}
 
 class DynamicQueueArray {
     private val capacity = 6
@@ -265,3 +277,57 @@ class DynamicQueueArray {
         this.rear = index
     }
 }
+
+class Deque() {
+    var backingList: MutableList<Any> = arrayListOf()
+    fun addFirst(element: Any) {
+        backingList.add(0, element)
+    }
+
+    fun getFirst(): Any? {
+        if (backingList.isEmpty()) {
+            return null
+        }
+        val value = backingList.first()
+        removeFirst()
+        return value
+    }
+
+    fun removeFirst() {
+        if (backingList.isNotEmpty()) backingList.removeAt(0)
+    }
+
+    fun peekFirst(): Any? {
+        return backingList.firstOrNull()
+    }
+
+    fun addLast(element: Any) {
+        backingList.add(element)
+    }
+
+    fun getLast(): Any? {
+        if (backingList.isEmpty()) {
+            return null
+        }
+        val value = backingList.last()
+        removeLast()
+        return value
+    }
+
+    fun removeLast() {
+        if (backingList.isNotEmpty()) backingList.removeAt(backingList.size - 1)
+    }
+
+    fun peekLast(): Any? {
+        return backingList.lastOrNull()
+    }
+
+    fun size(): Int {
+        return backingList.size
+    }
+
+    fun isDequeEmpty(): Boolean {
+        return backingList.isEmpty()
+    }
+}
+
