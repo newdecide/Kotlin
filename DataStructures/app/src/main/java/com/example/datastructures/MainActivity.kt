@@ -72,17 +72,39 @@ class MainActivity : AppCompatActivity() {
 //        println(queue.size())
 //        println(queue.isQueueEmpty())
 
-        var deq = Deque()
-        println(deq.isDequeEmpty())
-        println(deq.addFirst("karthiq"))
-        println(deq.isDequeEmpty())
-        println(deq.addLast(false))
-        println(deq.getLast())
-        println(deq.size())
-        println(deq.peekFirst())
-        println(deq.peekLast())
-        deq.removeLast()
-        deq.removeFirst()
+//        var deq = Deque()
+//        println(deq.isDequeEmpty())
+//        println(deq.addFirst("karthiq"))
+//        println(deq.isDequeEmpty())
+//        println(deq.addLast(false))
+//        println(deq.getLast())
+//        println(deq.size())
+//        println(deq.peekFirst())
+//        println(deq.peekLast())
+//        deq.removeLast()
+//        deq.removeFirst()
+
+        var ll = LinkedList<String>()
+        ll.append("존")
+        println(ll)
+        ll.append("캐리")
+        println(ll)
+        ll.append("잭")
+        println(ll)
+        ll.append("팀")
+        println(ll)
+        ll.append("스티브")
+        println(ll)
+        ll.append("피터")
+        println(ll)
+        print("\n\n")
+        println("첫번째 아이템: ${ll.first()?.value}")
+        println("마지막 아이템: ${ll.last()?.value}")
+        println("두번째 아이템: ${ll.first()?.next?.value}")
+        println("끝에서 두번째 아이템: ${ll.last()?.previous?.value}")
+        println("\n네번째 아이템: ${ll.nodeAtIndex(3)?.value}")
+        println("\n아이템 개수: ${ll.count()} items")
+
     }
 
     class StackWithList {
@@ -225,7 +247,7 @@ class DynamicQueueArray {
     }
 
     fun peek(): Int? {
-        if(isQueueEmpty()){
+        if (isQueueEmpty()) {
             println("Underflow ! Unable to remove element from Queue")
             return null
         } else {
@@ -259,13 +281,13 @@ class DynamicQueueArray {
 
         var tmpFront = front
         var index = -1
-        while(true){
+        while (true) {
             newArr[++index] = this.queueArr[tmpFront]
             tmpFront++
-            if(tmpFront == this.queueArr.size) {
+            if (tmpFront == this.queueArr.size) {
                 tmpFront = 0
             }
-            if(currentSize === index + 1){
+            if (currentSize === index + 1) {
                 break
             }
         }
@@ -331,3 +353,112 @@ class Deque() {
     }
 }
 
+class Node<T>(value: T) {
+    var value: T = value
+    var next: Node<T>? = null
+    var previous: Node<T>? = null
+}
+
+class LinkedList<T> {
+    private var head: Node<T>? = null
+    var isEmpty: Boolean = head == null
+    fun first(): Node<T>? = head
+    fun last(): Node<T>? {
+        var node = head
+        if (node != null) {
+            while (node?.next != null) {
+                node = node?.next
+            }
+            return node
+        } else {
+            return null
+        }
+    }
+
+    fun count(): Int {
+        var node = head
+        if (node != null) {
+            var counter = 1
+            while (node?.next != null) {
+                node = node?.next
+                counter += 1
+            }
+            return counter
+        } else {
+            return 0
+        }
+    }
+
+    fun nodeAtIndex(index: Int): Node<T>? {
+        if (index >= 0) {
+            var node = head
+            var i = index
+            while (node != null) {
+                if (i == 0) return node
+                i -= 1
+                node = node.next
+            }
+        }
+        return null
+    }
+
+    fun append(value: T) {
+        var newNode = Node(value)
+        var lastNode = this.last()
+        if (lastNode != null) {
+            newNode.previous = lastNode
+            lastNode.next = newNode
+        } else {
+            head = newNode
+        }
+    }
+
+    fun removeAll() {
+        head = null
+    }
+
+    fun removeNode(node: Node<T>): T {
+        val prev = node.previous
+        val next = node.next
+        if (prev != null) {
+            prev.next = next
+        } else {
+            head = next
+        }
+        next?.previous = prev
+        node.previous = null
+        node.next = null
+        return node.value
+    }
+
+    fun removeLast(): T? {
+        val last = this.last()
+        if (last != null) {
+            return removeNode(last)
+        } else {
+            return null
+        }
+    }
+
+    fun removeAtIndex(index: Int): T? {
+        val node = nodeAtIndex(index)
+        if (node != null) {
+            return removeNode(node)
+        } else {
+            return null
+        }
+    }
+
+    override fun toString(): String {
+        var s = "["
+        var node = head
+        while (node != null) {
+            s += "${node.value}"
+            node = node.next
+            if (node != null) {
+                s += ", "
+            }
+        }
+        return s + "]"
+    }
+}
