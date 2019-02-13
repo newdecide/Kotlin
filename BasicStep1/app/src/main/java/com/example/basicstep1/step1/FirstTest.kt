@@ -14,6 +14,7 @@ import com.example.basicstep1.TestClass
 class FirstTest (p : (Any) ->Unit): TestClass(p){
     // controll + o = Override
     override fun doTest() {
+        println("FirstTest")
         println("종결자(;) 없어도 됩니다.")
         println("var는 읽기 쓰기, val 읽기 전용")
 

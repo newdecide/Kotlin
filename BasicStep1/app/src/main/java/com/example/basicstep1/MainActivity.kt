@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         // :: 메서드 불러올 때 사용
         doTest(FirstTest(::WriteLn))
         doTest(NumberTest(::WriteLn))
-//        doTest(StringTest(::WriteLn))
+        doTest(StringTest(::WriteLn))
 //        doTest(AnyTest(::WriteLn))
 //        doTest(FunctionTest(::WriteLn))
     }

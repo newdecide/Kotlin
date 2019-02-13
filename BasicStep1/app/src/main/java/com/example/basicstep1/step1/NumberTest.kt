@@ -14,6 +14,7 @@ class NumberTest(p: (Any) -> Unit) : TestClass(p) {
         var shortV: Short = 30
         var byteV: Byte = 10
 
+        println("NumberTest")
         println(doubleV)
         println(floatV)
         println(intV)
