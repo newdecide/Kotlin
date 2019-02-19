@@ -3,7 +3,6 @@ package com.example.basicstep1.step1
 import com.example.basicstep1.TestClass
 
 class ConditionTest(p: (Any) -> Unit) : TestClass(p) {
-
     /*
     * if문은 자바와 유사 자바와 달리 Any타입과, in, is를 함께 사용해 더 유연함
     * for ( i in 1..9) 배열 or 범위만큼 반복한다.
@@ -40,7 +39,7 @@ class ConditionTest(p: (Any) -> Unit) : TestClass(p) {
             }
         }
         println(result)
-
+        println("")
     }
 
     fun ifTest(a: Any?) {
