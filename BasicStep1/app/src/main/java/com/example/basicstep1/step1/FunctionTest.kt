@@ -3,11 +3,18 @@ package com.example.basicstep1.step1
 import com.example.basicstep1.TestClass
 
 class FunctionTest ( p : (Any)-> Unit): TestClass(p){
+    /*
+        fun 함수명 ( 변수명 : 데이터크기 , ...) : 리턴값 { return; }
+        한 줄로 표현가능한 함수는 {} 대신 = 로 정의 가능하다 .
+        함수형 변수의 값 : { 변수정의 → 코드구현 }
+        함수형 변수의 형 : ( 입력정의 ) → 리턴정의
+    * */
+
     override fun doTest() {
         println("FunctionTest")
         // fun function의 약자
-        // 변수명 : 데이터) :리턴값
-        // = 한줄로 가능한건 가
+        // (변수명 : 데이터크기) :리턴값
+        // = 한줄로 할 때 사용
         fun Three (n : Int) = 3 * n
         println(Three(3).toString())
 
@@ -17,7 +24,7 @@ class FunctionTest ( p : (Any)-> Unit): TestClass(p){
         funByParameter(31 , " 숫자입니다")
         // 문자열 데이터를 받고 문자열 반환
         println(funByReturn("Parameter"))
-        // 인라인 함수로( int형 데이터 2개 받음)
+        // 인라인 함수로(int형 데이터 2개 받음)
         println(funByInLine(31,10))
 
         // 람다식

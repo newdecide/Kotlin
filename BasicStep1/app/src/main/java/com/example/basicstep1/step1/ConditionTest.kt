@@ -23,11 +23,11 @@ class ConditionTest(p: (Any) -> Unit) : TestClass(p) {
         loopTest(4)
         println("")
 
-        println("ConditionTest when문 cast")
+        println("ConditionTest when문 case")
         caseTest("kotlin study")
         caseTest(10.1f)
         caseTest(3)
-        caseTest("")
+        caseTest(10.11111)
         var a = "ABCDE"
         println(a)
         val result = when (a) {

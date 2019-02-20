@@ -19,15 +19,21 @@ class NumberTest(p: (Any) -> Unit) : TestClass(p) {
         println(floatV)
         println(intV)
 
-        // 캐스팅
+        // 캐스팅 크기변환 후, 대입
+        // to대입할크기() 메소드를 사용한다.
+
         doubleV = intV.toDouble()
         // doubleV = intV as Double
+        // as로 형변환은 기본형에서는 안된다.
         // as로 캐스팅하면 올리면 에러는 안뜨지만 성공못할거라 컴파일러가 말해준다.
         // 메서드로 toInt 해줘야 된다.
         // 숫자나 프라이머리는 as로 하지 않고 toDouble로 해줘야 된다.
+
         intV = doubleV.toInt()
+
         // 문자열로 변환
         println(byteV.toString())
+
         // 문자를 숫자로 변환
         var num = "123".toInt() + 10
         println(num)
