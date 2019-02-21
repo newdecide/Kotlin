@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         doTest(ConditionTest(::WriteLn))
         doTest(LableTest(::WriteLn))
         doTest(CollectionTest(::WriteLn))
-//        doTest(ExceptionTest(::WriteLn))
+        doTest(ExceptionTest(::WriteLn))
     }
 
     private fun doTest(o : TestClass){
