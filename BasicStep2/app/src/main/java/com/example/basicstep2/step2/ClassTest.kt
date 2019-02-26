@@ -26,7 +26,7 @@ class ClassTest(p: (Any) -> Unit) : TestClass(p) {
         var sName: String = "test1"
         var nAge: Int = 10
 
-        // 생성자1(this 패키지)
+        // 생성자1(this 객체)
         constructor() {
             println("class 경로: "+this.toString())
         }

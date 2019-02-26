@@ -7,7 +7,7 @@ class PolymorphTest ( p : (Any) -> Unit) : TestClass(p){
     /*
      * 다형성: 메서드와 클래스를 다양한 방법으로 동작하게 만들 수 있는 것을 의미한다.
      * 상속 클래스 메서드와 필드를 open으로 정의한다.
-     * 상속 받은 클래스에서 사용시 override 해서 사용 가능
+     * 상속 받은 클래스에서 사용시 override 해서 사용 가능 메서드, 변수 재정의
      * private에서 외부 사용 금지
      * 오버로딩(overloading)은 자바와 같다. 파라메터 값을 다르게 정의하면 된다.
      * 코틀린은 연산자 오버로딩을 지원한다. operator로 정의 가능 ex) plus, inc, dec
@@ -48,7 +48,7 @@ class PolymorphTest ( p : (Any) -> Unit) : TestClass(p){
     class childClass : baseClass(){
         // 오버라이드
         override var name =""
-        override  fun f1() = println(this.toString()+ " 재정의함.")
+        override fun f1() = println(this.toString()+ " 재정의함.")
         fun f2() = println("f2")
         // 오버로딩
         fun f2(s:String) = println("f2:$s ")
