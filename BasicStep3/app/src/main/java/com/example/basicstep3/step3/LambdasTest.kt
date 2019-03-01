@@ -12,7 +12,7 @@ class LambdasTest(p: (Any) -> Unit) : TestClass(p) {
     override fun doTest() {
         println("LambdasTest")
 
-        // 1. 람다식으로 정의한 함수형 변수(리턴이 따로 없어도 리턴이 된다.
+        // 1. 람다식으로 정의한 함수형 변수(리턴이 따로 없어도 리턴이 된다.)
         var pfunc = { a: Int, b: Int -> a + b }
         println(pfunc(10, 30))
 
