@@ -2,7 +2,7 @@ package com.example.basicstep3.step3
 
 import com.example.basicstep3.TestClass
 
-class LambdasTest(p: (Any) -> Unit) : TestClass(p) {
+class LambdasTest( p: (Any) -> Unit) : TestClass(p) {
     /*
     * lambdas 이름없는 함수
     * {변수 정의 -> 함수 구현}
