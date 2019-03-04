@@ -2,10 +2,7 @@ package com.example.basicstep3
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.example.basicstep3.step3.ClosureTest
-import com.example.basicstep3.step3.DslTest
-import com.example.basicstep3.step3.ExtFunctionTest
-import com.example.basicstep3.step3.LambdasTest
+import com.example.basicstep3.step3.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         doTest(ExtFunctionTest(::WriteLn))
         doTest(ClosureTest(::WriteLn))
         doTest(DslTest(::WriteLn))
-//        doTest(CurringTest(::WriteLn))
+        doTest(CurringTest(::WriteLn))
     }
 
     private fun doTest(o : TestClass){
