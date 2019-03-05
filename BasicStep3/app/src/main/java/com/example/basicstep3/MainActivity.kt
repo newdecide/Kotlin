@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         doTest(ClosureTest(::WriteLn))
         doTest(DslTest(::WriteLn))
         doTest(CurringTest(::WriteLn))
+        doTest(InfixTest(::WriteLn))
     }
 
     private fun doTest(o : TestClass){

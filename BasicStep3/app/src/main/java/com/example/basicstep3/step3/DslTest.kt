@@ -23,7 +23,7 @@ class DslTest( p: (Any) -> Unit) : TestClass(p) {
 
         // DSL 구조(Json과 유사한 구조, 팀단위 작업시 사용할지 의논하고 사용하길 추천)
         val p2 = MakePlayer {
-            // Java Random함수 사용 1~200, 1~70의 숫자 중 랜덤하게 불러온다.[
+            // Java Random함수 사용 1~200, 1~70의 숫자 중 랜덤하게 불러온다.
             name = "Player 2 - " + Random().nextInt(200).toString()
             status {
                 job = "Paladin"
