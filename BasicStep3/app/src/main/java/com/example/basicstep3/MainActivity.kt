@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         doTest(InfixTest(::WriteLn))
         doTest(MultiReturnTest(::WriteLn))
         doTest(LazyLateTest(::WriteLn))
+        doTest(PropertiesTest(::WriteLn))
     }
 
     private fun doTest(o : TestClass){
