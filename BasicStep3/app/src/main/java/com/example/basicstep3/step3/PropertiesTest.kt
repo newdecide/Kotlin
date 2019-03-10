@@ -6,7 +6,7 @@ class PropertiesTest (p: (Any) -> Unit) : TestClass(p){
     override fun doTest() {
         println("PropertiesTest")
         // password 프로퍼티로 사용
-        password = "123456789123456789"
+        password = "12345678912345678910"
         println(password)
 
         // 내가 만든 클래스에 확장 프로퍼티(newProp) 추가
