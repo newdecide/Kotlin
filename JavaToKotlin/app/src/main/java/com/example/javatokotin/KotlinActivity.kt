@@ -28,16 +28,16 @@ class KotlinActivity : BaseActivity() {
     }
 
     // 2. 람다식에 의한 코딩량 감소(아래 자바코드를 람다식으로 축약가능)
-//    private void two_setOnClickListner() {
-//        btnOk.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                // 자바에서 불편한 것 중에 하나가
-//                // 익명 클래스 만들다보면 코딩량이 우측으로 많아진다는 것이다.
-//
-//            }
-//        });
-//    }
+    //    private void two_setOnClickListner() {
+    //        btnOk.setOnClickListener(new View.OnClickListener() {
+    //            @Override
+    //            public void onClick(View view) {
+    //                // 자바에서 불편한 것 중에 하나가
+    //                // 익명 클래스 만들다보면 코딩량이 우측으로 많아진다는 것이다.
+    //
+    //            }
+    //        });
+    //    }
     private fun two_setOnClickListner() {
         btnOk.setOnClickListener {
             // 람다식은 코딩량을 현격하게 줄여준다.
