@@ -1,6 +1,7 @@
 package com.example.javatokotin
 
 import android.os.Bundle
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_java.*
 
 class KotlinActivity : BaseActivity() {
@@ -42,5 +43,29 @@ class KotlinActivity : BaseActivity() {
         btnOk.setOnClickListener {
             // 람다식은 코딩량을 현격하게 줄여준다.
         }
+    }
+
+    // 3. 변수의 형변환
+    private fun three_VariableTypeCasting() {
+        // 한쪽 형이 확실하면 나머지 코드는 알아서 이해하고 캐스팅해주려고 한다.
+        // (거의 완벽하다. 정확하지는 않지만 가끔 틀린 적도 있는 듯하다)
+        val txt : TextView? = findViewById(R.id.txtMessage)
+        val txt2 = findViewById(R.id.txtMessage) as TextView?
+    }
+
+    // 4. 프로퍼티 (Set / Get 구별)
+    private fun four_properties() {
+        // 코틀린은 C#처럼 프로퍼티를 설정할 수 있다.
+        val p = Person()
+        p.name = " Test "
+        WriteLn(p.name!!)
+    }
+
+    inner class Person {
+        var name: String? = null
+            get() {return field + "입니다"}
+            set(s : String? ){
+                field = this.javaClass.toString() + ":" + s
+            }
     }
 }

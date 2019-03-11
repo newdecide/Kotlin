@@ -3,6 +3,7 @@ package com.example.javatokotin;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class JavaActivity extends BaseActivity {
     Button btnOk;
@@ -37,5 +38,30 @@ public class JavaActivity extends BaseActivity {
 
             }
         });
+    }
+
+    // 3. 변수의 형변환
+    private void three_VariableTypeCasting() {
+        // 변수의 형에맞게 반드시 알려주어야 한다.
+        TextView txt = (TextView)findViewById(R.id.txtMessage);
+    }
+
+    // 4. 프로퍼티 (Set / Get 구별하여 함수구분)
+    private void four_properties() {
+        Person p = new Person();
+        p.setname(" Test ");
+        WriteLn(p.getname());
+    }
+
+    class Person{
+        private String name;
+
+        public String getname(){
+            return name + " 입니다";
+        }
+
+        public void setname(String s ){
+            this.name = getClass().getName() + ":" + s;
+        }
     }
 }
