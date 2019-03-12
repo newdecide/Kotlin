@@ -1,6 +1,8 @@
 package com.example.javatokotin;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -63,5 +65,40 @@ public class JavaActivity extends BaseActivity {
         public void setname(String s ){
             this.name = getClass().getName() + ":" + s;
         }
+    }
+
+    // 5. 자바에서 이벤트핸들러를 사용할 경우,
+    // 함수를 정의하지않고 코딩을 하려고 한다면
+    // Interface를 이름없는 객체를 만들어 사용하는 것이 일반적이다.
+    // 무척 코드가 길어진다.
+    private void five_highfunction(String s, onMyListner onMyListner) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("확인");
+        builder.setMessage(s);
+
+        final onMyListner ol =onMyListner;
+        builder.setPositiveButton("네", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                ol.onClick();
+            }
+        });
+
+        builder.setNegativeButton("아니오", new DialogInterface.OnClickListener (){
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+
+    }
+
+    // Java에서 Interface는 C/C++의 함수포인터의 역할을 한다.
+    // 적당한 이벤트핸들링을 하기위해서는 Interface 선언이 필수다.
+    interface onMyListner{
+        public void onClick();
     }
 }

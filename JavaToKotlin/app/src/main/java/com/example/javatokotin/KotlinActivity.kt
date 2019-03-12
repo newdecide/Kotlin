@@ -1,6 +1,8 @@
 package com.example.javatokotin
 
+import android.content.DialogInterface
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_java.*
 
@@ -67,5 +69,24 @@ class KotlinActivity : BaseActivity() {
             set(s : String? ){
                 field = this.javaClass.toString() + ":" + s
             }
+    }
+
+    // 5. 고차함수(함수를 매개변수로 받는 함수)
+    // 고차함수를 사용하면 람다식을 이용하여
+    // 자바보다 편리한 이벤트핸들러를 구현할 수 있다.
+    private fun five_highfunction(s : String,  pFunc : () -> Unit){
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("확인")
+        builder.setMessage(s)
+        builder.setPositiveButton("네", DialogInterface.OnClickListener { dialog, which ->
+            pFunc()
+        })
+
+        builder.setNegativeButton("아니오", DialogInterface.OnClickListener { dialog, which ->
+
+        })
+
+        val alert = builder.create()
+        alert.show()
     }
 }
