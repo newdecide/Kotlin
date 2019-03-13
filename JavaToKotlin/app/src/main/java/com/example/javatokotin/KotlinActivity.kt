@@ -1,10 +1,15 @@
 package com.example.javatokotin
 
 import android.content.DialogInterface
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
+import android.view.View
+import android.widget.Button
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_java.*
+
+import kotlinx.android.synthetic.main.activity_kotlin.*
+import java.util.*
 
 class KotlinActivity : BaseActivity() {
 
@@ -14,7 +19,18 @@ class KotlinActivity : BaseActivity() {
 
         first_findViewByID()
         two_setOnClickListner()
+        three_VariableTypeCasting()
+        four_properties()
+        five_highfunction("[네]를 눌러야 호출됩니다", { WriteLn("[네]를 눌렀습니다")})
+        six_newFunction()
+        seven_collection_loop()
+        eight_singleton()
+        nine_init_time()
+        ten_nullsafe()
+        eleven_dataclass()
+
     }
+
 
     // 1. findViewByID 비교
     private fun first_findViewByID() {
@@ -25,22 +41,12 @@ class KotlinActivity : BaseActivity() {
         // 복사붙여넣기를 하다보면 가끔 다른 Activity로 연결될 경우가 있다.
         // 이 소스의 예: import kotlinx.android.synthetic.main.activity_kotlin.*
 
-        // 변수가 이미 존재하기에 btnOk만 적어도  에러없음.
+        // 변수가 이미 존재하기에 아래는 에러없음.
         btnOk
 
     }
 
-    // 2. 람다식에 의한 코딩량 감소(아래 자바코드를 람다식으로 축약가능)
-    //    private void two_setOnClickListner() {
-    //        btnOk.setOnClickListener(new View.OnClickListener() {
-    //            @Override
-    //            public void onClick(View view) {
-    //                // 자바에서 불편한 것 중에 하나가
-    //                // 익명 클래스 만들다보면 코딩량이 우측으로 많아진다는 것이다.
-    //
-    //            }
-    //        });
-    //    }
+    // 2. 람다식에 의한 코딩량 감소
     private fun two_setOnClickListner() {
         btnOk.setOnClickListener {
             // 람다식은 코딩량을 현격하게 줄여준다.
@@ -89,4 +95,117 @@ class KotlinActivity : BaseActivity() {
         val alert = builder.create()
         alert.show()
     }
+
+    // 6. 함수형언어의 장점과 단점은 아직은 평가못하겠다.
+    // 단지, 쓰잘데없는 지역변수를 선언하지 않고 처리할 수 있다는 점은 매력적이다.
+    // 그것을 위해 코틀린에서는 let, apply, .. 등이 자주사용된다.
+    private fun six_newFunction() {
+        ( findViewById<View>(R.id.btnOk) as Button).apply{
+            text = "이젠 누르면 반응합니다"
+            setOnClickListener {
+                inlineFunc().let{
+                    WriteLn(" inlineFunc()의 결과는 " + it + "입니다")
+                }
+            }
+        }
+    }
+
+    // six_newFunction를 위한 인라인함수
+    internal fun inlineFunc(): Int {
+        return 3
+    }
+
+    // 7. collection과 루프
+    // 간단한 함수형 프로그래밍 기법으로 만족하는 경우
+    private fun seven_collection_loop() {
+
+        // example 1
+        var sum = 3
+        (0..10).filter { it % 2 == 0 }.map { sum = sum + it }.let{ WriteLn(sum.toString()) }
+
+        // example 2
+        // Android App에서 꽤나 마음에 들던 코딩방식
+        listOf(txt1, txt2, txt3, btn1, btn2)
+            .filter{ it is TextView}
+            .filter{ it.text == "A"}
+            .map { it.text = "텍스트" }
+
+
+        // example 3
+        listOf(txt1, txt2, txt3, btn1, btn2)
+            .filter{ it is Button}
+            .map { it.text = "버튼"; it.setTextColor(Color.parseColor("#FF00FF"))}
+
+    }
+
+    // 8.Java의 싱글톤처럼 코딩이 필요하지는 않다. object 하나로 끝난다.
+    private fun eight_singleton() {
+        val ins1 = SingleTonTest
+        ins1.getMyRef(this)
+        SingleTonTest.getMyRef(this)
+    }
+
+    object SingleTonTest{
+        var sTime : String = ""
+        init{
+            sTime = "${Date().toString()}"
+        }
+
+        fun getMyRef(base : BaseActivity) = base.WriteLn("${this.toString()} : ${sTime}")
+    }
+
+    // kotlin의 lazy init은 물건이다!
+    val btnMyOne: Button? by lazy {
+        WriteLn("I'm init now!")
+        findViewById(R.id.btn1) as Button
+    }
+
+    // 9. kotlin의 lazy init은 컨트롤초기화에서 빛을 발한다.
+    private fun nine_init_time() {
+        // 변수를 사용하는 순간! 초기화를 1번만 실행한다.
+        btnMyOne!!.setOnClickListener { WriteLn("I'm Clicked") }
+        btnMyOne!!.setOnClickListener { WriteLn("I'm Clicked") }
+    }
+
+    // 10. 함수형 스타일의 특징이 if문 없이 일괄적인 코딩을 추구
+    // 이다보니 가끔은 다음과 같은 코딩스타일도 편하게 느껴질 때가 있다.
+    private fun ten_nullsafe() {
+        val btn  : Button? = findViewById(R.id.btn1)
+        btn?.apply { setTextSize(18f); setBackgroundColor(Color.parseColor("#EEFF00")) }
+
+        val btn2 : Button? = null
+        // 변수명?. 이런 식으로 코딩하면 변수가 null일 경우 실행안됨 (run, apply, let, 등등)
+        btn2?.apply { setTextSize(18f); setBackgroundColor(Color.parseColor("#EEFF00")) }
+
+    }
+
+
+    // 11. data class처리
+    private fun eleven_dataclass() {
+
+        data class User(var name : String, var age : Int = 30, var job : String?)
+
+        // 초기화를 하고 값을 넣는 코딩이라면 data 클래스가 자바보다 편하다. 몸체{}없이 ()안에
+        // 선언만해도 편하게 사용할 수 있다. copy 함수도 유용. [필드명 = 값] 형태로 저장가능함.
+        val init = User("공개안함", job = "입력없음")
+        WriteLn(init.toString())
+        val myInfo = init.copy(name = "박모씨", job = "일용직개발자")
+        WriteLn(myInfo.toString())
+
+    }
+
 }
+
+/*
+*  kotlin의 불편한 점
+*
+*  1. null 채크(immutable, mutable 에러)
+*  변수를 ?형으로 선언하고 !!로 지정해주어야 java와 호환하기 쉽다
+*
+*  2. [기본적]으로 다른 파일이라도 internal 키워드를 사용하지않아도
+*     같은 패키지에서 변수명, 함수명이나 클래스명을
+*     중복해서 사용할 수 없다.
+*
+* */
+
+
