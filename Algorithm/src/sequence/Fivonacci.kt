@@ -12,10 +12,10 @@ fun main(args: Array<String>) {
     var A : Long = 1 // 첫째 항
     var B : Long = 1 // 둘째 항
     var S : Long = A+B // 누적변수: 첫째 항 + 둘째 항 초기값으로 담아둔다.
-    var N = 2
+    var N = 2 // 92까지 1씩 증가
     var C : Long = 0 // 셋째항 변수 선언
-    var i = 0
-    var j = 10
+    var i = 0 // 10이 되면 줄바꾸는 변수
+    var j = 10 // 10씩 증가하는 변수
 
     print("> ${A} ${B} ")
 
