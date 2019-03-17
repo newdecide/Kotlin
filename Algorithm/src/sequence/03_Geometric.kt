@@ -2,7 +2,7 @@ package sequence
 
 fun main(args: Array<String>) {
     // 결과물 : 2, 6, 18, 54, 162, 486 ...
-
+    // Geometric Sequence
     // 3.등비수열(각항의 곱 차이)
     var A :Long= 2 // 수열의 초항
     var R :Long = 3 // 수열의 공비
