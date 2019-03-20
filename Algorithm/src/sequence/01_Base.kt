@@ -33,7 +33,7 @@ fun main(args: Array<String>) {
 
     while (true) {
         s1 = s1 + n1
-        if (n1 % 3 == 0) { // 나머지 / 몫
+        if (n1 % 3 == 0) { // % : 나머지, / : 몫
             s2 = s2 + n1 * n1
         }
         n1++

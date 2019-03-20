@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
     while (true) {
         // A2 = A1 + D, A3 = A2 + D
         // An = An-1 + D
-        An = A + ((N - 1) * D) // 2 - 1 = 1*6 = 2 + 6 =8
+        An = A + ((N - 1) * D) // 2 + ((2 - 1) * 6) = 2 + 6 = 8
         print("${An} ")
 
         i++
