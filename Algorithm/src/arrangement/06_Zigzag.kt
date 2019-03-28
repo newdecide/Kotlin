@@ -1,4 +1,4 @@
-package math
+package arrangement
 
 // 'ㄹ'자 모양으로 배열 채우기
 fun main(args: Array<String>) {
