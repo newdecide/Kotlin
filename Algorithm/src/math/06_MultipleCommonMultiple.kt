@@ -7,15 +7,14 @@ fun main(args: Array<String>) {
     var i = 0 // 배열 첨자 0~9까지
 
     do {
-        var n3 = a[i] % 3
-        var n4 = a[i] % 4
-        var n = n3 + n4
+        var n3 = a[i] % 3 // 3의 배수
+        var n4 = a[i] % 4 // 4의 배수
+        var n = n3 + n4 // 2값을 더해도 0이면 3의 배수이면서 4의배수가 된다.
+        if (n == 0) {
+            cnt++ //3과 4의 공배수 카운트
+        }
         if (a[i] % 3 == 0 && a[i] % 4 == 0) {
             println("3과 4의 공배수: ${a[i]}")
-        }
-
-        if (n == 0) {
-            cnt++
         }
         i++ // i가 10이 될 때까지
     } while (i < 10)
