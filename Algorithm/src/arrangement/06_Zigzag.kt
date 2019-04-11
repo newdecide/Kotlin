@@ -1,6 +1,6 @@
 package arrangement
 
-// 'ㄹ'자 모양으로 배열 채우기
+// 06.'ㄹ'자 모양으로 배열 채우기
 fun main(args: Array<String>) {
     var i = 0
     var a = Array(5, { IntArray(5) })

@@ -1,5 +1,5 @@
 package arrangement
-// 열고정 배열
+// 01.열고정 배열
 fun main(args: Array<String>) {
     var arr = Array(5, {IntArray(5)})
     var v = 0 // 배열 원소에 저장되는 값

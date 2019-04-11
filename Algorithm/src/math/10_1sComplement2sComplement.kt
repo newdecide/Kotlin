@@ -1,6 +1,6 @@
 package math
 
-// 1의보수와 2의보수
+// 10.1의보수와 2의보수
 fun main(args: Array<String>) {
     var b = arrayListOf<Int>(0, 1, 0, 1, 0) // 2진수 배열
     // arrayOfNulls<Ibt>눈 배열의 크기만 선언한다.

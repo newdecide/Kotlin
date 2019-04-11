@@ -1,5 +1,6 @@
 package arrangement
 
+// 04.달팽이 배열
 fun main(args: Array<String>) {
     var arr = Array(5,{IntArray(5)})
     var n = 0 // 1~25까지 증가변수

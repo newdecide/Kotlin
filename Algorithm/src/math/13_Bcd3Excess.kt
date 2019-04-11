@@ -1,6 +1,6 @@
 package math
 
-// BCD 코드와 3초과 코드의 변
+// 13.BCD 코드와 3초과 코드의 변
 fun main(args: Array<String>) {
     var binary = arrayOf(0, 1, 1, 1) // 2진수 배열
     var excess = arrayOfNulls<Int>(4) // 3초과 코드 담는 배열

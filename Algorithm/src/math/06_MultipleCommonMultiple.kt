@@ -1,6 +1,6 @@
 package math
 
-// 6.배수와 공배수
+// 06.배수와 공배수
 fun main(args: Array<String>) {
     var a = arrayOf(21, 17, 4, 51, 24, 75, 40, 27, 48, 72) // 10개의 정수 데이터
     var cnt = 0 // 공배수 발견시 카운트 확인용

@@ -1,6 +1,6 @@
 package arrangement
 
-// 삼각형 모양으로 배열 채우기
+// 02.삼각형 모양으로 배열 채우기
 fun main(args: Array<String>) {
     var arr = Array(5, {IntArray(5)})
     var v = 0 // 배열 원소

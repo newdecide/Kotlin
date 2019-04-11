@@ -1,6 +1,6 @@
 package arrangement
 
-// 마름모 알고리(홀수 수열)
+// 05.마름모 알고리(홀수 수열)
 fun main(args: Array<String>) {
     var v = 1 // 배열에 입력 변수
     var m = 2 // 중간 값

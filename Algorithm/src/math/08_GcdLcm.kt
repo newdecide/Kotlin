@@ -1,6 +1,6 @@
 package math
 
-// 8.최대공약수와 최소공배수
+// 08.최대공약수와 최소공배수
 fun main(args: Array<String>) {
     var big = 532 // 큰값
     var small = 462 // 작은값

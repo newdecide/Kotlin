@@ -1,6 +1,6 @@
 package arrangement
 
-// 모래시계 모양으로 배열 채우기
+// 03.모래시계 모양으로 배열 채우기
 fun main(args: Array<String>) {
     var arr = Array(5, { IntArray(5) })
     var v = 1 // 배열 원소

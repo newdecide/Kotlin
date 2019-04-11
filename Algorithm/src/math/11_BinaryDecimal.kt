@@ -2,7 +2,7 @@ package math
 
 import java.lang.Math.abs
 
-// 2진수를 10진수로 변환
+// 11.2진수를 10진수로 변환
 fun main(args: Array<String>) {
     var binary = arrayOf(1, 1, 1, 1, 0, 1, 1, 0) // 2진수 배열
     var oneComplement = arrayOfNulls<Int>(8) // 1의보수 배열

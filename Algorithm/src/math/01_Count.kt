@@ -1,5 +1,6 @@
 package math
 
+// 01.성적 카운트
 fun main(args: Array<String>) {
     var a = arrayOf(100, 90, 80, 60, 85, 50, 95, 100, 75, 80) // 점수를 담은 배열
     var c = 0 // 카운트 변수
