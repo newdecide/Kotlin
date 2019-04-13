@@ -1,6 +1,6 @@
 package arrangement
 
-// 배열 회전
+// 08.배열 회전
 fun main(args: Array<String>) {
     var a = Array(5, { CharArray(5) })
 
