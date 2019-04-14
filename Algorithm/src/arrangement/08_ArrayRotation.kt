@@ -7,10 +7,9 @@ fun main(args: Array<String>) {
     var b = Array(5, { CharArray(5) })
 
     var c = Array(5, { CharArray(5) })
-    var n2: Char
 
+    var n2 = 'a'
 
-    n2 = 'a'
     for (r in 0 until 5) { // a~y까지 배열에 입력
         for (c in 0 until 5) {
             a[r][c] = n2
@@ -24,7 +23,7 @@ fun main(args: Array<String>) {
         }
     }
 /*
-변형안한 배열
+변형 안 한 배열
     a	b	c	d	e
     f	g	h	i	j
     k	l	m	n	o
@@ -53,7 +52,7 @@ fun main(args: Array<String>) {
         }
     }
 /*
-90도 회전
+90도 회전 1차
     u	p	k	f	a
     v	q	l	g	b
     w	r	m	h	c
@@ -83,7 +82,7 @@ fun main(args: Array<String>) {
     }
 
 /*
-90도 회전
+90도 회전 2차
     y	x	w	v	u
     t	s	r	q	p
     o	n	m	l	k

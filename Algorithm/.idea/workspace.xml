@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41a24d77-2b9a-4049-a83b-fe5a5fc7b9b2" name="Default Changelist" comment="NaturalWaterSequence">
-      <change afterPath="$PROJECT_DIR$/src/math/08_GcdLcm.kt" afterDir="false" />
+    <list default="true" id="41a24d77-2b9a-4049-a83b-fe5a5fc7b9b2" name="Default Changelist" comment="Rhombus">
+      <change afterPath="$PROJECT_DIR$/src/applicationalgorithm/02_SelectSort.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Algorithm/META-INF/Algorithm.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algorithm/META-INF/Algorithm.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Algorithm/math/_06_MultpleCommonMultipleKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/00_ReadMe" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/00_ReadMe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/06_MultipleCommonMultiple.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/06_MultipleCommonMultiple.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/math/07_PerfectNumber.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/math/07_PerfectNumber.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithm/math/00_ReadMe" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algorithm/math/00_ReadMe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithm/math/_01_CountKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algorithm/math/_01_CountKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithm/math/_06_MultipleCommonMultipleKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algorithm/math/_06_MultipleCommonMultipleKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/arrangement/08_ArrayRotation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/arrangement/08_ArrayRotation.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,10 +20,73 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/math/07_PerfectNumber.kt">
+        <entry file="file://$PROJECT_DIR$/src/arrangement/04_Snail.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="30">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/arrangement/05_Rhombus.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/arrangement/06_Zigzag.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/arrangement/07_magic.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/arrangement/08_ArrayRotation.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/applicationalgorithm/02_SelectSort.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/arrangement/09_MatrixMultiplication.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/math/09_Approximate.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -32,16 +95,16 @@
         <entry file="file://$PROJECT_DIR$/src/math/08_GcdLcm.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/math/06_MultipleCommonMultiple.kt">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/math/10_1sComplement2sComplement.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="30">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -81,25 +144,46 @@
         <option value="$PROJECT_DIR$/src/sequence/08_BridgeFractionSequence.kt" />
         <option value="$PROJECT_DIR$/src/sequence/09_MinTest.kt" />
         <option value="$PROJECT_DIR$/src/sequence/00_ReadMe" />
-        <option value="$PROJECT_DIR$/src/math/01_Count.kt" />
         <option value="$PROJECT_DIR$/src/math/02_MaxMin.kt" />
         <option value="$PROJECT_DIR$/src/math/03.kt" />
         <option value="$PROJECT_DIR$/src/math/03_SumAvg.kt" />
         <option value="$PROJECT_DIR$/src/math/04_Prime.kt" />
-        <option value="$PROJECT_DIR$/src/math/05_PrimeFactorization.kt" />
         <option value="$PROJECT_DIR$/src/math/06_Zigzag.kt" />
         <option value="$PROJECT_DIR$/src/math/06_MultpleCommonMultiple.kt" />
+        <option value="$PROJECT_DIR$/src/math/Approximate.kt" />
+        <option value="$PROJECT_DIR$/src/math/DecimalBinary.kt" />
+        <option value="$PROJECT_DIR$/src/math/11_DecimalBinary.kt" />
         <option value="$PROJECT_DIR$/src/math/00_ReadMe" />
+        <option value="$PROJECT_DIR$/src/math/12_DecimalHexadecimal.kt" />
+        <option value="$PROJECT_DIR$/src/math/14_Paritybit.kt" />
+        <option value="$PROJECT_DIR$/src/math/13_Bcd3Excess.kt" />
+        <option value="$PROJECT_DIR$/src/math/11_BinaryDecimal.kt" />
+        <option value="$PROJECT_DIR$/src/math/10_1sComplement2sComplement.kt" />
+        <option value="$PROJECT_DIR$/src/math/01_Count.kt" />
+        <option value="$PROJECT_DIR$/src/math/05_PrimeFactorization.kt" />
+        <option value="$PROJECT_DIR$/src/math/06_MultipleCommonMultiple.kt" />
         <option value="$PROJECT_DIR$/src/math/07_PerfectNumber.kt" />
         <option value="$PROJECT_DIR$/src/math/08_GcdLcm.kt" />
-        <option value="$PROJECT_DIR$/src/math/06_MultipleCommonMultiple.kt" />
+        <option value="$PROJECT_DIR$/src/math/09_Approximate.kt" />
+        <option value="$PROJECT_DIR$/src/arrangement/01_ColumnMajor.kt" />
+        <option value="$PROJECT_DIR$/src/arrangement/02_Triangle.kt" />
+        <option value="$PROJECT_DIR$/src/arrangement/03_Hourglass.kt" />
+        <option value="$PROJECT_DIR$/src/arrangement/04_Snail.kt" />
+        <option value="$PROJECT_DIR$/src/arrangement/05_Rhombus.kt" />
+        <option value="$PROJECT_DIR$/src/arrangement/06_Zigzag.kt" />
+        <option value="$PROJECT_DIR$/src/arrangement/07_magic.kt" />
+        <option value="$PROJECT_DIR$/src/arrangement/ArrayRotation.kt" />
+        <option value="$PROJECT_DIR$/src/arrangement/09_MatrixMultiplication.kt" />
+        <option value="$PROJECT_DIR$/src/arrangement/08_ArrayRotation.kt" />
+        <option value="$PROJECT_DIR$/src/applicationalgorithm/02_SelectSort.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1382" />
-    <option name="height" value="1411" />
+    <option name="x" value="21" />
+    <option name="y" value="118" />
+    <option name="width" value="1312" />
+    <option name="height" value="1159" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -121,24 +205,6 @@
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="arrangement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="math" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sequence" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -146,7 +212,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553939612013" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555247001202" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -172,67 +238,67 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.math._06_MultipleCommonMultipleKt">
-    <configuration name="arrangement._06_ZigzagKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Kotlin.applicationalgorithm._02_SelectSortKt">
+    <configuration name="applicationalgorithm._02_SelectSortKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="Algorithm" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="arrangement._06_ZigzagKt" />
+      <option name="MAIN_CLASS_NAME" value="applicationalgorithm._02_SelectSortKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="math._05_PrimeFactorizationKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="arrangement._04_SnailKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="Algorithm" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="math._05_PrimeFactorizationKt" />
+      <option name="MAIN_CLASS_NAME" value="arrangement._04_SnailKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="math._06_MultipleCommonMultipleKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="arrangement._05_RhombusKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="Algorithm" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="math._06_MultipleCommonMultipleKt" />
+      <option name="MAIN_CLASS_NAME" value="arrangement._05_RhombusKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="math._07_PerfectNumberKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="arrangement._07_magicKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="Algorithm" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="math._07_PerfectNumberKt" />
+      <option name="MAIN_CLASS_NAME" value="arrangement._07_magicKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="math._08_GcdLcmKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="arrangement._08_ArrayRotationKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="Algorithm" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="math._08_GcdLcmKt" />
+      <option name="MAIN_CLASS_NAME" value="arrangement._08_ArrayRotationKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -240,11 +306,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.math._06_MultipleCommonMultipleKt" />
-        <item itemvalue="Kotlin.math._08_GcdLcmKt" />
-        <item itemvalue="Kotlin.math._07_PerfectNumberKt" />
-        <item itemvalue="Kotlin.arrangement._06_ZigzagKt" />
-        <item itemvalue="Kotlin.math._05_PrimeFactorizationKt" />
+        <item itemvalue="Kotlin.applicationalgorithm._02_SelectSortKt" />
+        <item itemvalue="Kotlin.arrangement._08_ArrayRotationKt" />
+        <item itemvalue="Kotlin.arrangement._07_magicKt" />
+        <item itemvalue="Kotlin.arrangement._05_RhombusKt" />
+        <item itemvalue="Kotlin.arrangement._04_SnailKt" />
       </list>
     </recent_temporary>
   </component>
@@ -322,14 +388,147 @@
       <option name="project" value="LOCAL" />
       <updated>1553860945379</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Approximate">
+      <created>1554036801446</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1554036801446</updated>
+    </task>
+    <task id="LOCAL-00011" summary="1sComplement2sComplement">
+      <created>1554111809026</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1554111809026</updated>
+    </task>
+    <task id="LOCAL-00012" summary="BinaryDecimal">
+      <created>1554189742496</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1554189742497</updated>
+    </task>
+    <task id="LOCAL-00013" summary="DecimalHexadecimal">
+      <created>1554279379692</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1554279379692</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Bcd3Excess">
+      <created>1554371397644</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1554371397644</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Paritiybit">
+      <created>1554460336598</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1554460336599</updated>
+    </task>
+    <task id="LOCAL-00016" summary="ColumnMajor">
+      <created>1554560805093</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1554560805093</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Triangle">
+      <created>1554628758054</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1554628758054</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Hourglass">
+      <created>1554714396370</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1554714396370</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Snail">
+      <created>1554798843731</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1554798843732</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Snail">
+      <created>1554798974737</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1554798974737</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Snail">
+      <created>1554799228100</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1554799228100</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Rhombus">
+      <created>1554884468399</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1554884468399</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Magic">
+      <created>1554971618166</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1554971618166</updated>
+    </task>
+    <task id="LOCAL-00024" summary="ArrayRotation">
+      <created>1555060018063</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1555060018063</updated>
+    </task>
+    <task id="LOCAL-00025" summary="ArrayRotation">
+      <created>1555060324248</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1555060324248</updated>
+    </task>
+    <task id="LOCAL-00026" summary="ArrayRotation">
+      <created>1555060522688</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1555060522688</updated>
+    </task>
+    <task id="LOCAL-00027" summary="MatrixMultiplication">
+      <created>1555145920016</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1555145920016</updated>
+    </task>
+    <task id="LOCAL-00028" summary="MatrixMultiplication">
+      <created>1555146040656</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1555146040656</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1382" height="1411" extended-state="0" />
+    <frame x="21" y="118" width="1312" height="1159" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32686567" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27480316" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -338,15 +537,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297953" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995451" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4992126" visible="true" weight="0.2239925" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39925024" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007874" side_tool="true" visible="true" weight="0.2239925" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3297953" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3297953" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4992126" weight="0.3289597" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -405,7 +604,21 @@
     <MESSAGE value="PrimeFactorization" />
     <MESSAGE value="Zigzag" />
     <MESSAGE value="PerfectNumber" />
-    <option name="LAST_COMMIT_MESSAGE" value="PerfectNumber" />
+    <MESSAGE value="Approximate" />
+    <MESSAGE value="1sComplement2sComplement" />
+    <MESSAGE value="BinaryDecimal" />
+    <MESSAGE value="DecimalHexadecimal" />
+    <MESSAGE value="Bcd3Excess" />
+    <MESSAGE value="Paritiybit" />
+    <MESSAGE value="ColumnMajor" />
+    <MESSAGE value="Triangle" />
+    <MESSAGE value="Hourglass" />
+    <MESSAGE value="Snail" />
+    <MESSAGE value="Rhombus" />
+    <MESSAGE value="Magic" />
+    <MESSAGE value="ArrayRotation" />
+    <MESSAGE value="MatrixMultiplication" />
+    <option name="LAST_COMMIT_MESSAGE" value="MatrixMultiplication" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -423,10 +636,22 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/math/06_MultipleCommonMultiple.kt</url>
-          <line>3</line>
+          <url>file://$PROJECT_DIR$/src/math/08_GcdLcm.kt</url>
+          <line>19</line>
           <properties />
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/math/08_GcdLcm.kt</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/math/08_GcdLcm.kt</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -544,27 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/math/05_PrimeFactorization.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/math/04_Prime.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/math/03_SumAvg.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sequence/02_Isometric.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -579,13 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/arrangement/06_Zigzag.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sequence/04_Fivonacci.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -595,43 +792,176 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/math/00_ReadMe">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/12_DecimalHexadecimal.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/13_Bcd3Excess.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/14_Paritybit.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/11_BinaryDecimal.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/math/01_Count.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/math/02_MaxMin.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/math/08_GcdLcm.kt">
+    <entry file="file://$PROJECT_DIR$/src/math/03_SumAvg.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/04_Prime.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/math/07_PerfectNumber.kt">
+    <entry file="file://$PROJECT_DIR$/src/math/05_PrimeFactorization.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="30">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/math/06_MultipleCommonMultiple.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        <state relative-caret-position="30">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/07_PerfectNumber.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arrangement/01_ColumnMajor.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arrangement/02_Triangle.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arrangement/03_Hourglass.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arrangement/04_Snail.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arrangement/05_Rhombus.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arrangement/06_Zigzag.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/09_Approximate.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/08_GcdLcm.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/math/10_1sComplement2sComplement.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arrangement/09_MatrixMultiplication.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arrangement/07_magic.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arrangement/08_ArrayRotation.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/applicationalgorithm/02_SelectSort.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
         </state>
       </provider>
     </entry>
