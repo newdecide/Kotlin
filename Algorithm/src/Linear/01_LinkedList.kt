@@ -1,11 +1,10 @@
 package Linear
 
 import java.lang.IndexOutOfBoundsException
-import java.util.*
 
 // 08:20
 // 단일 연결 리스트는 헤드 노드와 일반 노드로 이루어진다.
-class MyLinkedList {
+class `01_LinkedList` {
     private val headNode: Node // 제일 첫번째의 노드로, '연결리스트'의 기준점이 될 뿐 데이터를 저장하진 않는다.
 
     private var size: Int
@@ -133,7 +132,7 @@ class MyLinkedList {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            val list = MyLinkedList()
+            val list = `01_LinkedList`()
             list.addFisrt(500)
             list.addFisrt(400)
             list.addFisrt(300)
